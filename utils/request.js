@@ -55,7 +55,7 @@ module.exports = cookies => {
     let reson = '超过总重试次数'
     let isOther = false
     let config = err.config;
-    let isMask = process.env.asm_verbose !== 'true'
+    let isMask = process.env.asm_verbose == 'true'
 
     if (['ETIMEDOUT', 'ECONNABORTED', 'ECONNRESET'].indexOf(err.code) !== -1) {
       reson = '出现网络超时错误'
